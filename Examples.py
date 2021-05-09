@@ -48,5 +48,5 @@ pickle_seria = Serializer.create_serializer(".pickle")
 toml_seria = Serializer.create_serializer(".toml")
 yaml_seria = Serializer.create_serializer(".yaml")
 
-met = yaml_seria.dump(Scholarship)
-loaded = yaml_seria.load()
+met = json_seria.dump(Scholarship)
+loaded = json_seria.load()

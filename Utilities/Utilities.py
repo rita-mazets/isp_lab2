@@ -7,7 +7,7 @@ primitives = (int, str, bool, float)
 def pack_function(obj):
     result = {"__type__": "function"}
     if inspect.ismethod(obj):
-        obj = obj.__func__   (достаем функцию через атрибут)
+        obj = obj.__func__
     result["__name__"] = obj.__name__
     globs = get_global_vars(obj)
     result["__globals__"] = pack_iterable(globs)
